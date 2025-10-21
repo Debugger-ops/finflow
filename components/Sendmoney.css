@@ -1,0 +1,584 @@
+/* Send Money Component Styles */
+
+.send-money-container {
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.send-money-header {
+  margin-bottom: 2rem;
+}
+
+.send-money-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.send-money-subtitle {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  background: transparent;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border-radius: 0.5rem;
+}
+
+.back-button:hover {
+  background: hsl(var(--accent));
+}
+
+.back-button .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Search Section */
+.search-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  transition: var(--transition-smooth);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quick-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.quick-action-btn:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.05);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elegant);
+}
+
+.quick-action-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Contacts Section */
+.contacts-section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  background: hsl(var(--card));
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-align: left;
+  width: 100%;
+}
+
+.contact-card:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.05);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-elegant);
+}
+
+.contact-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.25rem;
+}
+
+.contact-email {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.contact-meta {
+  text-align: right;
+}
+
+.last-transaction {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Amount Input Section */
+.recipient-preview {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: hsl(var(--accent));
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+}
+
+.recipient-name {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.recipient-email {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.amount-input-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 3rem 0 2rem;
+}
+
+.currency-symbol {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+}
+
+.amount-input {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 200px;
+  text-align: left;
+}
+
+.amount-input::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.quick-amounts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.quick-amount-btn {
+  padding: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.quick-amount-btn:hover {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.1);
+}
+
+/* Note Section */
+.note-section {
+  margin-bottom: 2rem;
+}
+
+.note-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.note-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  resize: vertical;
+  font-family: inherit;
+  transition: var(--transition-smooth);
+}
+
+.note-input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+}
+
+/* Primary Button */
+.primary-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: var(--gradient-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.primary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elegant);
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Review Section */
+.review-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-amount {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.review-label {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.5rem;
+}
+
+.review-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.review-divider {
+  height: 1px;
+  background: hsl(var(--border));
+  margin: 1.5rem 0;
+}
+
+.review-detail {
+  margin-bottom: 1.5rem;
+}
+
+.review-detail:last-child {
+  margin-bottom: 0;
+}
+
+.review-recipient {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.review-recipient-name {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.review-recipient-email {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.review-note {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: hsl(var(--accent));
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: hsl(var(--accent));
+  border-radius: 0.5rem;
+}
+
+.payment-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: hsl(var(--primary));
+}
+
+.review-fee {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: hsl(142 76% 36%);
+}
+
+.review-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.info-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: hsl(39 97% 50% / 0.1);
+  border: 1px solid hsl(39 97% 50% / 0.3);
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: hsl(39 97% 50%);
+  flex-shrink: 0;
+}
+
+.info-text {
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+.confirm-button {
+  background: var(--gradient-success);
+}
+
+/* Success Section */
+.success-container {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.success-animation {
+  margin-bottom: 2rem;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-circle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: var(--gradient-success);
+}
+
+.success-icon {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  stroke-width: 3;
+}
+
+.success-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.success-subtitle {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 2rem;
+}
+
+.success-details {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.success-detail-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.success-detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.5rem;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.secondary-button {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.secondary-button:hover {
+  background: hsl(var(--accent));
+  border-color: hsl(var(--primary));
+}
+
+@media (max-width: 640px) {
+  .send-money-container {
+    padding: 1rem;
+  }
+
+  .amount-input {
+    font-size: 2.5rem;
+    width: 150px;
+  }
+
+  .currency-symbol {
+    font-size: 2.5rem;
+  }
+
+  .quick-amounts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

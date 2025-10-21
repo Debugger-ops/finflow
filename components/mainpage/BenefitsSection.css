@@ -1,0 +1,134 @@
+#benefits {
+  padding: 4rem 1rem;
+  background-color: rgba(240, 240, 240, 0.3);
+}
+
+@media (min-width: 768px) {
+  #benefits {
+    padding: 6rem 1rem;
+  }
+}
+
+#benefits .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  #benefits .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/* Left Section */
+#benefits h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  #benefits h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #benefits h2 {
+    font-size: 3rem;
+  }
+}
+
+#benefits h2 span {
+  background: linear-gradient(to right, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#benefits p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Benefit List */
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+.benefit-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #4f46e5, #06b6d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.benefit-icon svg {
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+}
+
+.benefit-item span {
+  color: #222;
+}
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.stats-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom right, rgba(79, 70, 229, 0.05), rgba(6, 182, 212, 0.05));
+  text-align: left;
+  transform: scale(0.95);
+  animation: scaleIn 0.6s forwards;
+}
+
+.stats-card .value {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.stats-card .label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    transform: scale(1);
+  }
+}
